@@ -11,7 +11,7 @@
   </head>
   <body>
     <div class="main">
-      <div class="card product">
+      <div class="card product" id="product">
         <div class="card-image">
           <figure class="image is-4by3">
             <img
@@ -32,7 +32,7 @@
             </div>
             <div class="media-content">
               <p class="title is-4">Aged Cheddar</p>
-              <p class="subtitle is-6 price">$8,95</p>
+              <p class="subtitle is-6 price" id="price">$8,95</p>
             </div>
           </div>
 
@@ -46,5 +46,10 @@
         </div>
       </div>
     </div>
+	<script>
+	let products = document.getElementById("product");
+	let price = document.getElementById("price");
+	products.setAttribute("data-price",price.innerText);
+	</script>
   </body>
 </html>
